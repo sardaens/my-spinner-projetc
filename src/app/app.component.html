@@ -1,0 +1,7 @@
+<app-spinner></app-spinner>
+
+<button (click)="getUsers()">getUsers</button>
+<h2>List of posts</h2>
+<ul>
+  <li *ngFor="let post of posts">{{ post.title }}</li>
+</ul>
