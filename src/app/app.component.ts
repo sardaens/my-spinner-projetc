@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ApiServiceService } from './api-service.service';
+import { LoaderService } from './loader.service';
 
 @Component({
   selector: 'app-root',
@@ -9,9 +10,11 @@ import { ApiServiceService } from './api-service.service';
 export class AppComponent {
   title = 'my-spinner-project';
 
+  loading$ = this.loader.loading$;
+
   posts: any[] = [];
 
-  constructor(private apiService: ApiServiceService)
+  constructor(private apiService: ApiServiceService, public loader: LoaderService)
   {
   }
 

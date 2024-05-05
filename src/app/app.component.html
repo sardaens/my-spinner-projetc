@@ -1,4 +1,11 @@
-<app-spinner></app-spinner>
+<app-spinner *ngIf="loading$ | async"></app-spinner>
+
+<app-header></app-header>
+
+<button  (click)="loader.show()">Show Loader</button>
+
+<button  (click)="loader.hide()">Hide Loader</button>
+
 
 <button (click)="getUsers()">getUsers</button>
 <h2>List of posts</h2>
